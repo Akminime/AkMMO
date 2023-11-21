@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-
-<link rel="stylesheet" href="../styles.css">
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +11,12 @@
     <meta property="og:title" content="AK's MMO">
     <meta property="og:description" content="Jump into a fantasy land based around magic and luck">
     <title>AK's MMO</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
     <div class="container">
+        <h1>Login Or Create Your Account</h1>
         <div class="button-container">
             <a href="/AkMMO/login/" class="button">Login</a>
             <a href="/AkMMO/store/" class="button">Store</a>
@@ -24,4 +24,53 @@
             <a href="/AkMMO/play/" class="button">Play!</a>
         </div>
     </div>
+
+    <div class="login-box">
+        <div class="lb-header">
+            <a href="#" class="active" id="login-box-link">Login</a>
+            <a href="#" id="signup-box-link">Sign Up</a>
+        </div>
+        <div class="social-login">
+            <a href="#">
+                <i class="fa fa-facebook fa-lg"></i>
+                Login in with facebook
+            </a>
+            <a href="#">
+                <i class="fa fa-google-plus fa-lg"></i>
+                log in with Google
+            </a>
+        </div>
+        <form class="email-login">
+            <div class="u-form-group">
+                <input type="email" placeholder="Email" />
+            </div>
+            <div class="u-form-group">
+                <input type="password" placeholder="Password" />
+            </div>
+            <div class="u-form-group">
+                <button>Log in</button>
+            </div>
+            <div class="u-form-group">
+                <a href="#" class="forgot-password">Forgot password?</a>
+            </div>
+        </form>
+        <form class="email-signup">
+            <div class="u-form-group">
+                <input type="email" placeholder="Email" />
+            </div>
+            <div class="u-form-group">
+                <input type="password" placeholder="Password" />
+            </div>
+            <div class="u-form-group">
+                <input type="password" placeholder="Confirm Password" />
+            </div>
+            <div class="u-form-group">
+                <button>Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
+</html>

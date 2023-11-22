@@ -38,10 +38,13 @@ h1 {
 }
 
 .card-table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80%;
   margin: auto;
-  text-align: center; /* Center the content */
 }
+
 
 .card-table {
   width: 100%;

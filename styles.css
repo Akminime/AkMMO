@@ -40,6 +40,7 @@ h1 {
 .card-table-container {
   width: 80%;
   margin: auto;
+  text-align: center; /* Center the content */
 }
 
 .card-table {
@@ -52,13 +53,15 @@ h1 {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align text content to the left within the card */
 }
 
-/* Additional styling for card content */
 .card h3 {
   color: #333;
+  font-size: 1.5em; /* Adjust the font size of the heading */
 }
 
 .card p {
   color: #666;
+  font-size: 1.2em; /* Adjust the font size of the paragraph */
 }

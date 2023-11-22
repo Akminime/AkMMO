@@ -36,3 +36,29 @@ h1 {
 .news-section ul {
   list-style-type: none;
 }
+
+.card-table-container {
+  width: 80%;
+  margin: auto;
+}
+
+.card-table {
+  width: 100%;
+  border-spacing: 20px; /* Adjust the spacing between cards */
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styling for card content */
+.card h3 {
+  color: #333;
+}
+
+.card p {
+  color: #666;
+}

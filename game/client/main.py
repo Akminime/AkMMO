@@ -4,11 +4,15 @@ window = pyglet.window.Window()
 background = pyglet.image.load("resources/images/background1.png")
 backgroundsprite = pyglet.sprite.Sprite(background)
 backgroundsprite.scale = 3
+playerimage = pyglet.image.load("resources/images/bard1.png")
+player = pyglet.sprite.Sprite(playerimage)
+player.position = (500, 250, 0)
 
 @window.event
 def on_draw():
     window.clear()
     backgroundsprite.draw()
+    player.draw()
 
 @window.event
 def on_key_press(symbol, modifiers):
@@ -19,26 +23,31 @@ def on_key_press(symbol, modifiers):
         )
         print(f"New Background Sprite POS: {backgroundsprite.x}, {backgroundsprite.y}")
     
-    if symbol == 97:
+    elif symbol == 97:
         print("Key A Pressed, Moving Left")
         backgroundsprite.position = (
             backgroundsprite.x + 10, backgroundsprite.y, 0
         )
         print(f"New Background Sprite POS: {backgroundsprite.x}, {backgroundsprite.y}")
 
-    if symbol == 115:
+    elif symbol == 115:
         print("Key S Pressed, Moving Down")
         backgroundsprite.position = (
             backgroundsprite.x, backgroundsprite.y + 10, 0
         )
         print(f"New Background Sprite POS: {backgroundsprite.x}, {backgroundsprite.y}")
 
-    if symbol == 100:
+    elif symbol == 100:
         print("Key D Pressed, Moving Right")
         backgroundsprite.position = (
             backgroundsprite.x - 10, backgroundsprite.y, 0
         )
         print(f"New Background Sprite POS: {backgroundsprite.x}, {backgroundsprite.y}")
+
+
+
+    else:
+        print(f"Key {symbol} pressed but it has no mapped function")
 
 
 @window.event

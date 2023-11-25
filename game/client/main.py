@@ -1,10 +1,11 @@
 import pyglet
 
-window = pyglet.window.Window()
 background = pyglet.image.load("resources/images/background1.png")
+playerimage = pyglet.image.load("resources/images/bard1.png")
+window = pyglet.window.Window()
 backgroundsprite = pyglet.sprite.Sprite(background)
 backgroundsprite.scale = 3
-playerimage = pyglet.image.load("resources/images/bard1.png")
+backgroundsprite.position = (-960, -1200, 0)
 player = pyglet.sprite.Sprite(playerimage)
 player.position = (500, 250, 0)
 

@@ -1,70 +1,38 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-.container {
-    text-align: center;
-    margin-top: 50px;
+header, nav, section, footer {
+    margin: 20px;
 }
 
-.button-container {
-    margin-top: 20px;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 0 10px;
+nav li {
+    float: left;
+    margin-right: 20px;
+}
+
+nav a {
     text-decoration: none;
-    color: #fff;
-    background-color: #3498db;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #2980b9;
-}
-
-h1 {
     color: #333;
+    font-weight: bold;
 }
 
-.news-section ul {
-  list-style-type: none;
+section {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-.card-table-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  margin: auto;
-}
-
-
-.card-table {
-  width: 100%;
-  border-spacing: 20px; /* Adjust the spacing between cards */
-}
-
-.card {
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left; /* Align text content to the left within the card */
-}
-
-.card h3 {
-  color: #333;
-  font-size: 1.5em; /* Adjust the font size of the heading */
-}
-
-.card p {
-  color: #666;
-  font-size: 1.2em; /* Adjust the font size of the paragraph */
+footer {
+    text-align: center;
+    clear: both;
 }

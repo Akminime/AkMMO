@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color: #ECF0F1;
+    color: #23272A;
 }
 
 header, nav, section, footer {
@@ -35,4 +37,18 @@ section {
 footer {
     text-align: center;
     clear: both;
+}
+
+h1, h2 {
+    font-size: 3.0em
+}
+
+p {
+    font-size: 1.2em;
+}
+
+
+.footerdiv {
+    background-color: #23272A;
+    color: #ECF0F1;
 }

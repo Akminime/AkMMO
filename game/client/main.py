@@ -1,58 +1,26 @@
-import pyglet
+import pygame
+import sys
 
-background = pyglet.image.load("resources/images/background1.png")
-playerimage = pyglet.image.load("resources/images/bard1.png")
-window = pyglet.window.Window()
-backgroundsprite = pyglet.sprite.Sprite(background)
-backgroundsprite.scale = 3
-backgroundsprite.position = (-960, -1200, 0)
-player = pyglet.sprite.Sprite(playerimage)
-player.position = (500, 250, 0)
+pygame.init()
 
-@window.event
-def on_draw():
-    window.clear()
-    backgroundsprite.draw()
-    player.draw()
-
-@window.event
-def on_key_press(symbol, modifiers):
-    if symbol == 119:
-        print("Key W Pressed, Moving Up")
-        backgroundsprite.position = (
-            backgroundsprite.x, backgroundsprite.y - 10, 0
-        )
-        print(f"New Background Sprite POS: {backgroundsprite.x}, {backgroundsprite.y}")
-    
-    elif symbol == 97:
-        print("Key A Pressed, Moving Left")
-        backgroundsprite.position = (
-            backgroundsprite.x + 10, backgroundsprite.y, 0
-        )
-        print(f"New Background Sprite POS: {backgroundsprite.x}, {backgroundsprite.y}")
-
-    elif symbol == 115:
-        print("Key S Pressed, Moving Down")
-        backgroundsprite.position = (
-            backgroundsprite.x, backgroundsprite.y + 10, 0
-        )
-        print(f"New Background Sprite POS: {backgroundsprite.x}, {backgroundsprite.y}")
-
-    elif symbol == 100:
-        print("Key D Pressed, Moving Right")
-        backgroundsprite.position = (
-            backgroundsprite.x - 10, backgroundsprite.y, 0
-        )
-        print(f"New Background Sprite POS: {backgroundsprite.x}, {backgroundsprite.y}")
+width, height = 800, 600
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption("fighting game")
 
 
 
-    else:
-        print(f"Key {symbol} pressed but it has no mapped function")
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
+    keys = pygame.key.get_pressed()
 
 
-@window.event
-def on_mouse_motion(x, y, dx, dy):
-    print(f"Mouse Moved to ({x}, {y})")
+    if keys[pygame.K_a]:
+        print("Key A Pressed")
 
-pyglet.app.run()
+    if keys[pygame.K_d]:
+        print("Key D Pressed")
